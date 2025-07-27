@@ -13,6 +13,7 @@ import software.amazon.awssdk.services.codepipeline.model.PipelineSummary;
 public class AWSCICDTool {
 
 	public static void main(String[] args) {
+
 		Region region = Region.US_EAST_1;
 
 		listCodeDeployApplications(region);
@@ -20,6 +21,7 @@ public class AWSCICDTool {
 	}
 
 	public static void listCodeDeployApplications(Region region) {
+
 		try (CodeDeployClient deployClient = CodeDeployClient.builder().region(region).build()) {
 			ListApplicationsRequest request = ListApplicationsRequest.builder().build();
 			ListApplicationsResponse response = deployClient.listApplications(request);
@@ -32,6 +34,7 @@ public class AWSCICDTool {
 	}
 
 	public static void listCodePipelinePipelines(Region region) {
+
 		try (CodePipelineClient pipelineClient = CodePipelineClient.builder().region(region).build()) {
 			ListPipelinesRequest request = ListPipelinesRequest.builder().build();
 			ListPipelinesResponse response = pipelineClient.listPipelines(request);
