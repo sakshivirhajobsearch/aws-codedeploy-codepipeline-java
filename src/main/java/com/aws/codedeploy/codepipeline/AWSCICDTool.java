@@ -1,4 +1,4 @@
-package com.aws.devtools;
+package com.aws.codedeploy.codepipeline;
 
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.codedeploy.CodeDeployClient;
